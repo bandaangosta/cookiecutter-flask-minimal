@@ -4,7 +4,8 @@ clean:
 	rm -rf venv && rm -rf *.egg-info && rm -rf dist && rm -rf *.log*
 
 venv:
-	virtualenv --python=python3 venv && venv/bin/python setup.py develop
+	#virtualenv --python=python3 venv && venv/bin/python setup.py develop
+	virtualenv venv && venv/bin/pip install --editable .
 
 run: venv
 	FLASK_APP={{cookiecutter.package_name}} {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg venv/bin/flask run

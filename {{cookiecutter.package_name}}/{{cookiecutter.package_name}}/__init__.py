@@ -1,17 +1,9 @@
 import os
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('{{cookiecutter.package_name}}.default_settings')
-app.config.from_envvar('{{cookiecutter.package_name.upper()}}_SETTINGS')
-
-if not app.debug:
-    import logging
-    from logging.handlers import TimedRotatingFileHandler
-    # https://docs.python.org/3.6/library/logging.handlers.html#timedrotatingfilehandler
-    file_handler = TimedRotatingFileHandler(os.path.join(app.config['LOG_DIR'], '{{cookiecutter.package_name}}.log'), 'midnight')
-    file_handler.setLevel(logging.WARNING)
-    file_handler.setFormatter(logging.Formatter('<%(asctime)s> <%(levelname)s> %(message)s'))
-    app.logger.addHandler(file_handler)
+app.config.from_envvar('{{cookiecutter.package_name.upper()}}_SETTINGS', silent=True)
+app.config.from_envvar('settings.cfg', silent=True)
 
 import {{cookiecutter.package_name}}.views

@@ -1,8 +1,7 @@
 # flask-minimal
 
 This is a **minimal** [Flask](http://flask.pocoo.org) project, with no external dependencies except for Flask
-itself. It doesn't impose how to implement the web application, but it is **ready for production** deployment from the
-start.
+itself. It suggests deployment with Apache + mod_wsgi.
 
 
 ## Usage
@@ -42,15 +41,13 @@ Included:
 
  - Makefile with few typical tasks automated (see generated README for details)
 
+- It suggests [deployment](http://flask.pocoo.org/docs/0.12/deploying/) with Apache + mod_wsgi. If you are interested in an out-of-the-box deployment automation, check out accompanying
+   [`cookiecutter-flask-ansible`](https://github.com/candidtim/cookiecutter-flask-ansible); see generated README for more ideas about deployment
+
 Not included:
 
  - everything else: there is no SQLAlchemy, or MongoKit, or Bootstrap CSS, or React, or whatever else here;
    it is up to you to chose how to implement your application
-
- - no choice on how to [deploy the application](http://flask.pocoo.org/docs/0.12/deploying/) is made, no WSGI container
-   is chosen; if you are interested in an out-of-the-box deployment automation, check out accompanying
-   [`cookiecutter-flask-ansible`](https://github.com/candidtim/cookiecutter-flask-ansible); see generated
-   README for more ideas about deployment
 
 
 # Contributions
