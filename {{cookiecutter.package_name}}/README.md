@@ -57,3 +57,16 @@ working directory to create and write log files in it, and finally run a
 [WSGI container](http://flask.pocoo.org/docs/0.12/deploying/wsgi-standalone/) with the application.
 And, most likely, it will also run behind a
 [reverse proxy](http://flask.pocoo.org/docs/0.12/deploying/wsgi-standalone/#proxy-setups).
+
+
+## Deployment with Docker
+
+While in project folder, where Dockerfile resides, run:
+
+    docker build -t {{cookiecutter.application_name}} .
+    docker run -it --rm -p 80:80 --name my_{{cookiecutter.application_name}} {{cookiecutter.application_name}}
+
+If tested OK, you can run the app in background:
+
+   docker run --detach -p 80:80 --restart unless-stopped --name my_{{cookiecutter.application_name}} {{cookiecutter.application_name}}   (to run on reboot)
+
