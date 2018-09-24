@@ -63,10 +63,10 @@ And, most likely, it will also run behind a
 
 While in project folder, where Dockerfile resides, run:
 
-    docker build -t {{cookiecutter.application_name|lower}} .
-    docker run -it --rm -p 80:80 --name my_{{cookiecutter.application_name|lower}} {{cookiecutter.application_name|lower}}
+    docker build -t {{cookiecutter.package_name|lower}} .
+    docker run -it --rm -p 80:80 --name my_{{cookiecutter.package_name}} {{cookiecutter.package_name}}
 
 If tested OK, you can run the app in background:
 
-   docker run --detach -p 80:80 --restart unless-stopped --name my_{{cookiecutter.application_name|lower}} {{cookiecutter.application_name|lower}}   (to run on reboot)
+   docker run --detach -p 80:80 --restart unless-stopped --name my_{{cookiecutter.package_name}} {{cookiecutter.package_name}}   (to run on reboot)
 
