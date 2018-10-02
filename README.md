@@ -1,7 +1,7 @@
 # flask-minimal
 
 This is a **minimal** [Flask](http://flask.pocoo.org) project, with no external dependencies except for Flask
-itself. It suggests deployment with Apache + mod_wsgi.
+itself. It suggests deployment with Apache + mod_wsgi or nginx + uwsgi.
 
 
 ## Usage
