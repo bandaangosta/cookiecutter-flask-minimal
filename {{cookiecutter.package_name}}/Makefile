@@ -5,7 +5,7 @@ clean:
 
 venv:
 	#virtualenv --python=python3 venv && venv/bin/python setup.py develop
-	virtualenv venv && venv/bin/pip install --editable .
+	virtualenv --python=python3 venv && venv/bin/pip install --editable .
 
 run: venv
 	FLASK_APP={{cookiecutter.package_name}} {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg venv/bin/flask run

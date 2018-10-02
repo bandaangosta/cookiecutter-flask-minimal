@@ -61,9 +61,11 @@ And, most likely, it will also run behind a
 
 ## Deployment with Docker
 
-While in project folder, where Dockerfile resides, run:
+Two Docker-based deployments are available in this project: one based on Apache + mod_wsgi and the other on nginx + uwsgi. See each Dockerfile for details.
 
-    docker build -t {{cookiecutter.package_name|lower}} .
+While in project folder, where Dockerfiles reside, run:
+
+    docker build -t {{cookiecutter.package_name|lower}} -f Dockerfile.xxx .
     docker run -it --rm -p 80:80 --name my_{{cookiecutter.package_name}} {{cookiecutter.package_name}}
 
 If tested OK, you can run the app in background:
