@@ -1,7 +1,7 @@
 # flask-minimal
 
 This is a **minimal** [Flask](http://flask.pocoo.org) project, with no external dependencies except for Flask
-itself. It suggests deployment with Apache + mod_wsgi or nginx + uwsgi.
+itself. It suggests deployment with Apache + mod_wsgi or nginx + uwsgi, using Docker containers.
 
 
 ## Usage
@@ -12,7 +12,7 @@ Install [cookiecutter](https://github.com/audreyr/cookiecutter):
 
 Create your application from this template:
 
-    cookiecutter https://github.com/candidtim/cookiecutter-flask-minimal.git
+    cookiecutter https://github.com/bandaangosta/cookiecutter-flask-minimal.git
 
 All set! Run the application:
 
@@ -41,7 +41,7 @@ Included:
 
  - Makefile with few typical tasks automated (see generated README for details)
 
-- It suggests [deployment](http://flask.pocoo.org/docs/0.12/deploying/) with Apache + mod_wsgi. If you are interested in an out-of-the-box deployment automation, check out accompanying
+- It suggests [deployment](http://flask.pocoo.org/docs/0.12/deploying/) with Apache + mod_wsgi, using Docker containers. If you are interested in an out-of-the-box deployment automation, check out accompanying
    [`cookiecutter-flask-ansible`](https://github.com/candidtim/cookiecutter-flask-ansible); see generated README for more ideas about deployment
 
 Not included:
