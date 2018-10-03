@@ -1,4 +1,5 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.7-alpine3.7
 COPY . /app
 RUN pip install -r requirements.txt
+RUN pip uninstall -y enum34
 ENV STATIC_PATH /app/{{cookiecutter.package_name}}/static
