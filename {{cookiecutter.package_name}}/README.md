@@ -61,7 +61,7 @@ And, most likely, it will also run behind a
 
 ## Deployment with Docker
 
-Two Docker-based deployments are available in this project: one based on Apache + mod_wsgi and the other on nginx + uwsgi. See each Dockerfile for details.
+Three Docker-based deployments are available in this project: based on Apache + mod_wsgi, on nginx + uwsgi and on meinheld + gunicorn. The latter is preferred for maximum performance. See each Dockerfile for details.
 
 While in project folder, where Dockerfiles reside, run:
 
