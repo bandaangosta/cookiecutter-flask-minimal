@@ -1,7 +1,7 @@
 # flask-minimal
 
 This is a **minimal** [Flask](http://flask.pocoo.org) project, with no external dependencies except for Flask
-itself. It suggests deployment with Apache + mod_wsgi or nginx + uwsgi, using Docker containers.
+itself. It suggests deployment with meinheld + gunicorn, using Docker containers. Apache + mod_wsgi and nginx + uwsgi options are also available.
 
 
 ## Usage
