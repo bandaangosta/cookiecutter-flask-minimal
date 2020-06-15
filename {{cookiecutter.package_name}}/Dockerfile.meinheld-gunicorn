@@ -1,6 +1,5 @@
 FROM tiangolo/meinheld-gunicorn-flask:python3.7-alpine3.8
 COPY . /app
-RUN pip install -r requirements.txt
-#RUN pip uninstall -y enum34
+RUN pip install --no-cache-dir -r requirements.txt
 ENV STATIC_PATH /app/{{cookiecutter.package_name}}/static
 ENV MODULE_NAME {{cookiecutter.package_name}}
